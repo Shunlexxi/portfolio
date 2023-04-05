@@ -1,0 +1,225 @@
+/* styling for the index page */
+
+
+/* MAIN SECTION */
+
+main {
+    width: 100%;
+    height: calc(100vh - 6rem); /* fixing behind header */
+    margin-top: 6rem;
+    background-image: url(../images/portrait.png), url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 120vh, cover;
+    background-position: bottom left calc(50% + 8rem), center;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25rem;
+    z-index: 100;
+}
+
+main .main-intro h1 {
+    font-size: 9.6rem;
+    line-height: 10.6rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+main p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    
+}
+
+main a {
+    font-size: 1.8rem;
+    display: block;
+    background-color: var(--site-color-01);
+    padding: 1rem 2rem;
+    width: fit-content;
+    margin-top: 2rem;
+}
+
+main .main-quotes p {
+    border-left: 0.4rem solid var(--site-color-01);
+    padding-left: 2rem;
+    margin: 4rem 0rem;
+}
+
+main .main-intro {
+    /* position: relative;
+    right: 20vh; */
+    padding-bottom: 8vh;
+    
+}
+
+main .main-quotes {
+    /* position: relative;
+    left: 10vh; */
+    padding-bottom: 8vh;
+}
+
+main .main-quotes p:nth-child(2){
+    margin-left: 10rem;
+}
+
+
+/* CATEGORY SECTION */
+
+.index-category {
+    width: 100%;
+    padding: 6rem 0rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.index-category p {
+    font-size: 2.2rem;
+    color: #111;
+    text-align: center;
+    padding-bottom: 4rem;
+    text-transform: uppercase;
+    flex-basis: 100%;
+}
+
+.index-category-box {
+    width: 25rem;
+    height: 25rem;
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--site-color-01-hover);
+    opacity: 0.5;
+    transition: all ease-in-out 200ms;
+}
+
+.index-category-box:hover .dark-overlay {
+    opacity: 0;
+}
+
+/* replace nth child with BEM naming convention */
+.index-category-box:nth-child(2) {
+    background-image: url(../images/Web\ Development.jpg);
+
+}
+
+.index-category-box:nth-child(3) {
+    background-image: url(../images/social-media-management.png);
+
+}
+
+.index-category-box:nth-child(4) {
+    background-image: url(../images/Graphics-Design.png);
+
+}
+
+.index-category-box:nth-child(5) {
+    background-image: url(../images/Video-Editing.png);
+
+}
+
+.index-category-box h3 {
+    text-align: center;
+    text-shadow: -0.2rem 2rem 4rem #000;
+    z-index: 100;
+}
+
+/* ABOUT SECTION */
+
+
+.index-about {
+    width: 100%;
+    padding: 6rem 0;
+}
+
+
+.index-about-flex {
+    padding: 4rem 1rem;
+    background-color: var(--site-color-02);
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+}
+
+
+.about-headshot img {
+    width: 50rem;
+    border-radius: 15rem;
+}
+
+.about-text h2 {
+    margin-bottom: 1rem;
+    flex-basis: 45.5rem;
+}
+
+.about-text a {
+    display: block;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    background-color: var(--site-color-01);
+}
+
+.about-text a:hover {
+    background-color: var(--site-color-01-hover);
+}
+
+.about-skill{
+    flex-basis: 35rem;
+}
+
+.about-skill-bar {
+    width: calc(100% - 0.8rem);
+    height: 2rem;
+    border: 0.4rem solid var(--site-color-01-hover);
+    border-radius: 1rem;
+}
+
+
+.about-skill-bar-fill {
+    height: 100%;
+    background-color: var(--site-color-01);
+}
+
+.html {
+    width: 95%;
+}
+
+.css {
+    width: 75%;
+}
+
+.js {
+    width: 60%;
+}
+
+.python {
+    width: 60%;
+}
+
+.c {
+    width: 80%;
+}
+
+.git {
+    width: 95%;
+}
