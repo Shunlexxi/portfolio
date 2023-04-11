@@ -1,37 +1,39 @@
 /* styling for the index page */
 
 
-/* MAIN SECTION */
+/* MAIN/HERO SECTION */
 
 main {
     width: 100%;
     height: calc(100vh - 6rem); /* fixing behind header */
     margin-top: 6rem;
+    padding: 20px auto;
     background-image: url(../images/portrait.png), url(../images/bg.png);
     background-repeat: no-repeat;
     background-size: 120vh, cover;
-    background-position: bottom left calc(50% + 8rem), center;
+    background-position: bottom left calc(50% + 6rem), center;
+    display: flex;
+    align-items: center;
 }
 
 .main-flex {
     display: flex;
     justify-content: center;
-    align-items: center;
-    column-gap: 25rem;
+    column-gap: 35rem;
     z-index: 100;
 }
 
+
 main .main-intro h1 {
-    font-size: 9.6rem;
-    line-height: 10.6rem;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    font-size: 8rem;
+    line-height: 106px;
 }
+
 
 main p {
     font-size: 1.8rem;
-    line-height: 3rem;
-    
+    max-width: 400px;
+    line-height: 30px;
 }
 
 main a {
@@ -49,22 +51,26 @@ main .main-quotes p {
     margin: 4rem 0rem;
 }
 
+/*
 main .main-intro {
-    /* position: relative;
-    right: 20vh; */
-    padding-bottom: 8vh;
-    
+     moving with position relative 
+    position: relative;
+    right: 20vh;
+
 }
 
 main .main-quotes {
-    /* position: relative;
-    left: 10vh; */
-    padding-bottom: 8vh;
+    moving with position relative  
+    position: relative;
+    left: 24vh;
+    
 }
+*/
 
 main .main-quotes p:nth-child(2){
     margin-left: 10rem;
 }
+
 
 
 /* CATEGORY SECTION */
@@ -96,7 +102,7 @@ main .main-quotes p:nth-child(2){
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* x - axis */
     position: relative;
 }
 
@@ -156,18 +162,22 @@ main .main-quotes p:nth-child(2){
     background-color: var(--site-color-02);
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 6rem;
 }
 
 
 .about-headshot img {
-    width: 50rem;
+    width: 30rem;
     border-radius: 15rem;
+}
+
+.about-text {
+    flex-basis: 65.5rem;
 }
 
 .about-text h2 {
     margin-bottom: 1rem;
-    flex-basis: 45.5rem;
 }
 
 .about-text a {
@@ -222,4 +232,102 @@ main .main-quotes p:nth-child(2){
 
 .git {
     width: 95%;
+}
+
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 600px) {
+    
+    main {
+        align-items: flex-end;
+    }
+    
+    main .main-intro {
+        padding-bottom: 3vh;
+    }
+
+    main .main-intro h1 {
+        font-size: 5rem;
+        line-height: 1.1;
+        text-align: center;
+        margin-bottom: 10px;   
+    }
+    
+    main p {
+        line-height: 1.75rem;
+        text-align: center;
+        padding: 0 20px;
+        
+    }
+    
+    main a {
+       margin: 10px auto;
+    }
+    
+
+    main .main-quotes {
+        display: none;
+    }
+    
+
+    /* CATEGORY (MediaQuery) */
+
+    .index-category {
+        padding: 4rem 0 2rem;
+        row-gap: 1rem;
+    }
+    
+    .index-category p {
+        padding-bottom: 2rem;
+    }
+    
+    .index-category-box {
+        width: calc(100% - 20px);
+        height: 16rem;
+    }
+    
+    /* ABOUT (MediaQuery) */
+
+    /* currently ignoring....
+    MAYBE ITS THE WRAPPER THAT"S CAUSING TEXT TO OVERFLOW
+    */ 
+
+    .index-about-flex {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+
+
+        /* MAYBE convert flex to block ?????????? 
+        display: block;
+        margin: 0 auto;
+        */
+    }
+
+
+    .about-headshot {
+        width: 20%;
+    }
+
+
+    .about-headshot img {
+        width: 100%;
+    }
+
+    .about-text {
+        flex-basis: 100%;
+    }
+
+.about-text h2 {
+    text-align: center;
+}
+
+.about-text p {
+    text-align: center;
+}
+
+.about-text a {
+    margin: 1rem auto 1rem;
+}
+
 }
